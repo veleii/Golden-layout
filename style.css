@@ -4,49 +4,58 @@
 }
 
 body {
-    gap: 1em;
+    gap: 8px;
     min-height: 100vh;
     padding:8em;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto auto auto;
+    grid-template-rows: 40px 20px 100px auto 100px;
     grid-template-areas: 
     "nav nav "
-    "header aside"
+    "div div"
+    "header header"
     "main aside"
     "footer footer";
 }
 
+div {
+    grid-area: div;
+    background-color: rgb(196, 196, 196);
+}
 header {
     grid-area: header;
-    background-color: antiquewhite;
+    background-color: rgb(196, 196, 196);
     padding: 1em;
 }
 
 
 nav {
     grid-area: nav;
-    background-color: aqua;
+    background-color: rgb(196, 196, 196);
     padding:1em;
-
-  
-
+    height: 10px;
    
 }
 main {
     grid-area: main;
-    background-color: aquamarine;
+    background-color: rgb(196, 196, 196);
     padding: 1em;
 }
 
 aside {
     grid-area: aside;
-    background-color: blueviolet;
+    background-color: rgb(196, 196, 196);
     padding: 1em;
 }
 
 footer {
     grid-area: footer;
-    background-color: slategrey;
+    background-color: rgb(196, 196, 196);
     padding: 1em;
+}
+
+p {
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }
